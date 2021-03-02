@@ -210,8 +210,11 @@ if (global.CURRENT_GAME>-1) {
 		draw_clicker(738,456,50,20,"Best Theme",C_GREEN_DARK,C_GREEN_OUTLINE);
 		
 		if (checkMe == 2) {
-			
-			global.AWARD_THEME=global.CURRENT_GAME;
+			if (global.AWARD_THEME == global.CURRENT_GAME) {
+				global.AWARD_THEME=-1;
+			} else {
+				global.AWARD_THEME=global.CURRENT_GAME;
+			}
 			save_data();
 			
 		}
@@ -230,7 +233,11 @@ if (global.CURRENT_GAME>-1) {
 		draw_clicker(848,456,50,20,"Best Concept",C_GREEN_DARK,C_GREEN_OUTLINE);
 		
 		if (checkMe == 2) {
-			global.AWARD_CONCEPT=global.CURRENT_GAME;
+			if (global.AWARD_CONCEPT == global.CURRENT_GAME) {
+				global.AWARD_CONCEPT=-1;
+			} else {
+				global.AWARD_CONCEPT=global.CURRENT_GAME;
+			}
 			save_data();
 		}
 		
@@ -248,7 +255,11 @@ if (global.CURRENT_GAME>-1) {
 		
 		draw_clicker(958,456,50,20,"Best Pres.",C_GREEN_DARK,C_GREEN_OUTLINE);
 		if (checkMe == 2) {
-			global.AWARD_PRESENTATION=global.CURRENT_GAME;
+			if (global.AWARD_PRESENTATION == global.CURRENT_GAME) {
+				global.AWARD_PRESENTATION=-1;
+			} else {
+				global.AWARD_PRESENTATION=global.CURRENT_GAME;
+			}
 			save_data();
 		}
 		
@@ -266,7 +277,11 @@ if (global.CURRENT_GAME>-1) {
 		
 		draw_clicker(793,504,50,20,"Best Story",C_GREEN_DARK,C_GREEN_OUTLINE);
 		if (checkMe == 2) {
-			global.AWARD_STORY=global.CURRENT_GAME;
+			if (global.AWARD_STORY == global.CURRENT_GAME) {
+				global.AWARD_STORY=-1;
+			} else {
+				global.AWARD_STORY=global.CURRENT_GAME;
+			}
 			save_data();
 		}
 		
@@ -285,7 +300,11 @@ if (global.CURRENT_GAME>-1) {
 		draw_clicker(903,504,50,20,"Best Devlog",C_GREEN_DARK,C_GREEN_OUTLINE);
 		
 		if (checkMe == 2) {
-			global.AWARD_DEVLOG=global.CURRENT_GAME;
+			if (global.AWARD_DEVLOG == global.CURRENT_GAME) {
+				global.AWARD_DEVLOG=-1;
+			} else {
+				global.AWARD_DEVLOG=global.CURRENT_GAME;
+			}
 			save_data();
 		}
 		
