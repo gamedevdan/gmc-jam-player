@@ -1,0 +1,7 @@
+This Jam Player project initially created by
+Dan Johnston, GameDevDan, https://danjohnston.uk
+
+First build uses execute_shell_simple extension by 
+YellowAfterLife
+https://github.com/YAL-GameMaker/execute_shell_simple
+https://yellowafterlife.itch.io/gamemaker-execute-shell-simple

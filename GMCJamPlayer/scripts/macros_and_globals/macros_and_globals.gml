@@ -1,0 +1,16 @@
+function macros_and_globals() {
+
+	// COLORS
+	#macro C_FIELD_DARK $232323
+	#macro C_FIELD_DARK_OUTLINE $282828
+	#macro C_BUTTON_DARK $232323
+	#macro C_BUTTON_DARK_OUTLINE $535353
+	#macro C_BUTTON_LIGHT $4B433F
+	#macro C_BUTTON_LIGHT_OUTLINE $7D7D7D
+	#macro C_TEXT $FFFFFF
+	#macro C_GRAY_TEXT $646464
+	#macro C_GREEN_OUTLINE $5D9B03
+	#macro C_GREEN_DARK $434F0F
+	#macro C_GREEN_LIGHT $7F9B02
+
+}
