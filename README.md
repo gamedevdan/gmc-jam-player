@@ -1,3 +1,4 @@
+![Jam-Player-Logo](https://github.com/gamedevdan/gmc-jam-player/blob/main/logo_flat.png)
 # gmc-jam-player
 A player/randomiser for the GMC Jam
 
