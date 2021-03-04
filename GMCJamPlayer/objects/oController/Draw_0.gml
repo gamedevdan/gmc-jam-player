@@ -29,9 +29,8 @@ for (var i=0;i<ds_list_size(global.LIST_TORANK);i++) {
 		_boxColor = $333333;	
 	}
 	
-	// This would change the background of the selected game to GREEN
-	// but it is not currently functional as the variable column_a_selected is not currently used
-	if (i == column_a_selected) {
+	// This changes the background of the selected game to GREEN
+	if ((global.CURRENT_GAME != -1) && (global.LIST_TORANK[|i] == global.CURRENT_GAME)) {
 		_boxColor = C_GREEN_DARK;	
 	}
 	
@@ -64,9 +63,8 @@ for (var i = 0;i<global.GAME_MAX;i++) {
 		_boxColor = $333333;	
 	}
 	
-	// This would change the background of the selected game to GREEN
-	// but it is not currently functional as the variable column_b_selected is not currently used
-	if (i == column_b_selected) {
+	// This changes the background of the selected game to GREEN
+	if ((global.CURRENT_GAME != -1) && (global.LEADERBOARD[i] == global.CURRENT_GAME)) {
 		_boxColor = C_GREEN_DARK;	
 	}
 	
