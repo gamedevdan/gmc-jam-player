@@ -2,8 +2,6 @@
 macros_and_globals();
 init();
 
-// Set which row of each column is currently selected
-// and how far up each column has been scrolled
 // Set a variable for the currently highlighted / selected game
 global.CURRENT_GAME = -1;
 
