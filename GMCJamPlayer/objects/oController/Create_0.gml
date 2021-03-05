@@ -2,9 +2,6 @@
 macros_and_globals();
 init();
 
-// Set a variable for the currently highlighted / selected game
-global.CURRENT_GAME = -1;
-
 // Set which row of each column is currently selected
 // and how far up each column has been scrolled
 // Also set the mouse wheel delay to 0

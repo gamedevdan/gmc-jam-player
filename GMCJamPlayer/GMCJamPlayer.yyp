@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"sGMCJam40Logo","path":"sprites/sGMCJam40Logo/sGMCJam40Logo.yy",},"order":1,},
+    {"id":{"name":"reset","path":"scripts/reset/reset.yy",},"order":14,},
     {"id":{"name":"load_data","path":"scripts/load_data/load_data.yy",},"order":13,},
     {"id":{"name":"sVoting","path":"sprites/sVoting/sVoting.yy",},"order":3,},
     {"id":{"name":"sShift","path":"sprites/sShift/sShift.yy",},"order":5,},
