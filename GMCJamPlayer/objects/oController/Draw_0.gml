@@ -431,3 +431,30 @@ if (checkMe>0) {
 	draw_clicker(848,32,80,20,"Export Votes",C_BUTTON_DARK,C_BUTTON_DARK_OUTLINE);
 	
 }
+
+// Create the clickable on-screen button for exporting the current votes & reviews to the clipboard
+var checkMe = clicker_check(980,32,40,20);
+if (checkMe>0) {
+	
+	// Drawing the button if the mouse is hovering over it
+	draw_clicker(980,32,40,20,"Reset",C_GREEN_DARK,C_GREEN_OUTLINE);
+	
+	// If the button was clicked
+	if (checkMe == 2) {
+		
+		// Ask the user if they're sure they want to do this, as it will overwrite clipboard data
+		var _choice = show_question("Are you sure you want to reset all your data?");
+		if (_choice == true) {
+			
+			// If the user said "yes", export the clipboard data
+			reset();
+			
+		}
+		
+	}
+} else {
+	
+	// Drawing the button if the mouse isn't hovering over it
+	draw_clicker(980,32,40,20,"Reset",C_BUTTON_DARK,C_BUTTON_DARK_OUTLINE);
+	
+}

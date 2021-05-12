@@ -41,4 +41,42 @@ function load_data(){
 	// close the ini file
 	ini_close();
 
+	// Create or clear DS list to store which games are left to be played
+	if (ds_exists(global.LIST_TOPLAY, ds_type_list)) {
+		ds_list_clear(global.LIST_TOPLAY);
+	}
+	else {
+		global.LIST_TOPLAY = ds_list_create();
+	}
+	
+	// Create or clear DS list to store which games are left to be ranked
+	if (ds_exists(global.LIST_TORANK, ds_type_list)) {
+		ds_list_clear(global.LIST_TORANK);
+	}
+	else {
+		global.LIST_TORANK = ds_list_create();
+	}
+
+	// Loop through the save data we just loaded in adding games to the correct unplayed/uranked ds lists
+	for (var i=0;i<global.GAME_MAX;i++) {
+
+		if (global.GAME_PLAYED[i] < 1) {
+	
+			ds_list_add(global.LIST_TOPLAY,i);
+	
+		}
+	
+		if (global.GAME_PLAYED[i] > 0 && global.GAME_RANK[i] < 0) {
+	
+			ds_list_add(global.LIST_TORANK,i);
+	
+		}
+
+	}
+
+	// Shuffle the "to play" list so the user plays them in a random order
+	ds_list_shuffle(global.LIST_TOPLAY);
+	
+	// Deselect any selected game
+	global.CURRENT_GAME = -1;
 }

@@ -20,31 +20,13 @@ function init(){
 	// Check how many games were listed in the CSV and save this to a global variable
 	global.GAME_MAX = ds_grid_height(global.JAM_DATABASE);
 
+	// Initialize global variable for the currently selected game
+	global.CURRENT_GAME = -1;
+
+	// Initialize global variables to store the games left to play and rank
+	global.LIST_TOPLAY = -1;
+	global.LIST_TORANK = -1;
+
 	// Open the save data ini to read information on things the user has already voted for
 	load_data();
-
-	// Create DS lists to store which games are left to be played and which are left to be ranked
-	global.LIST_TOPLAY = ds_list_create();
-	global.LIST_TORANK = ds_list_create();
-
-	// Loop through the save data we just loaded in adding games to the correct unplayed/uranked ds lists
-	for (var i=0;i<global.GAME_MAX;i++) {
-
-		if (global.GAME_PLAYED[i] < 1) {
-	
-			ds_list_add(global.LIST_TOPLAY,i);
-	
-		}
-	
-		if (global.GAME_PLAYED[i] > 0 && global.GAME_RANK[i] < 0) {
-	
-			ds_list_add(global.LIST_TORANK,i);
-	
-		}
-
-	}
-
-	// Shuffle the "to play" list so the user plays them in a random order
-	ds_list_shuffle(global.LIST_TOPLAY);
-
 }
